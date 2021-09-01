@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apply Data Annotations", "Apply Data Annotations\Apply Data Annotations.csproj", "{56084FC9-A017-48A9-9882-7C96F7CE5A04}"
 EndProject
 Global
