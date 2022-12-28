@@ -32,7 +32,7 @@ Namespace Apply_Data_Annotations
         Public Property ProductName As String
 
         <GridEditor(TemplateKey:="comboBox")>
-        Public Property Country As [Enum]
+        Public Property Country As Countries
 
         <Required>
         Public Property City As String

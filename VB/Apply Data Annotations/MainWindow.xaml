@@ -7,7 +7,10 @@
         Title="MainWindow" Height="350" Width="650">
     <Window.Resources>
         <DataTemplate x:Key="comboBox">
-            <dxe:ComboBoxEdit x:Name="PART_Editor" ItemsSource="{dxe:EnumItemsSource EnumType={x:Type local:Countries}}"/>
+            <dxe:ComboBoxEdit x:Name="PART_Editor" 
+                              ItemsSource="{dxe:EnumItemsSource EnumType={x:Type local:Countries}}" 
+                              IsTextEditable="False" 
+                              ApplyItemTemplateToSelectedItem="True"/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
