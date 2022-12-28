@@ -27,7 +27,7 @@ namespace Apply_Data_Annotations {
         [Display(Name = "Product")]
         public string ProductName { get; set; }
         [GridEditor(TemplateKey = "comboBox")]
-        public Enum Country { get; set; }
+        public Countries Country { get; set; }
         [Required]
         public string City { get; set; }
         [NumericMask(Mask = "c", UseAsDisplayFormat = true)]
