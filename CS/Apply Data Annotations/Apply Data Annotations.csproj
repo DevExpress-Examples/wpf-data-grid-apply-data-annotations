@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -121,5 +121,14 @@
   -->
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\at.png" />
+    <Resource Include="Images\br.png" />
+    <Resource Include="Images\de.png" />
+    <Resource Include="Images\gb.png" />
+    <Resource Include="Images\it.png" />
+    <Resource Include="Images\mx.png" />
+    <Resource Include="Images\us.png" />
   </ItemGroup>
 </Project>
