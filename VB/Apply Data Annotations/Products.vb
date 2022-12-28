@@ -1,39 +1,59 @@
-Imports System.Collections.Generic
+Imports DevExpress.Mvvm.DataAnnotations
+Imports System
+Imports System.Collections.ObjectModel
 Imports System.ComponentModel
 Imports System.ComponentModel.DataAnnotations
 
-Public Class Product
+Namespace Apply_Data_Annotations
 
-    <Display(Order:=0, ShortName:="Company")>
-    Public Property CompanyName As String
+    Public Enum Countries
+        <Image("pack://application:,,,/Images/at.png")>
+        Austria
+        <Image("pack://application:,,,/Images/br.png")>
+        Brazil
+        <Image("pack://application:,,,/Images/de.png")>
+        Germany
+        <Image("pack://application:,,,/Images/it.png")>
+        Italy
+        <Image("pack://application:,,,/Images/mx.png")>
+        Mexico
+        <Image("pack://application:,,,/Images/gb.png")>
+        UK
+        <Image("pack://application:,,,/Images/us.png")>
+        USA
+    End Enum
 
-    Public Property Country As String
+    Public Class Product
 
-    Public Property City As String
+        <Editable(False)>
+        Public Property Id As Integer
 
-    <[ReadOnly](True)>
-    Public Property UnitPrice As Double
+        <Display(Name:="Product")>
+        Public Property ProductName As String
 
-    <Display(Description:="This field is hidden", Order:=-1)>
-    Public Property Quantity As Integer
+        <GridEditor(TemplateKey:="comboBox")>
+        Public Property Country As [Enum]
 
-    <Display(AutoGenerateField:=False, Description:="This column isn't created")>
-    Public Property AdditionalInfo As String
-End Class
+        <Required>
+        Public Property City As String
 
-Public Class ProductList
+        <NumericMask(Mask:="c", UseAsDisplayFormat:=True)>
+        Public Property UnitPrice As Double
 
-    Shared Public Function GetData() As List(Of Product)
-        Dim list As List(Of Product) = New List(Of Product)()
-        list.Add(New Product() With {.CompanyName = "Island Trading", .Country = "UK", .City = "Cowes", .UnitPrice = 19, .Quantity = 10})
-        list.Add(New Product() With {.CompanyName = "Reggiani Caseifici", .Country = "Italy", .City = "Reggio Emilia", .UnitPrice = 12.5, .Quantity = 16})
-        list.Add(New Product() With {.CompanyName = "Ricardo Adocicados", .Country = "Brazil", .City = "Rio de Janeiro", .UnitPrice = 19, .Quantity = 12})
-        list.Add(New Product() With {.CompanyName = "QUICK-Stop", .Country = "Germany", .City = "QUICK-Stop", .UnitPrice = 22, .Quantity = 50})
-        list.Add(New Product() With {.CompanyName = "Split Rail Beer & Ale", .Country = "USA", .City = "Reggio Emilia", .UnitPrice = 18, .Quantity = 20})
-        list.Add(New Product() With {.CompanyName = "Ernst Handel", .Country = "Austria", .City = "Graz", .UnitPrice = 21, .Quantity = 52})
-        list.Add(New Product() With {.CompanyName = "Save-a-lot Markets", .Country = "USA", .City = "Boise", .UnitPrice = 7.75, .Quantity = 120})
-        list.Add(New Product() With {.CompanyName = "Tortuga Restaurante", .Country = "Mexico", .City = "México D.F.", .UnitPrice = 21, .Quantity = 15})
-        list.Add(New Product() With {.CompanyName = "Bottom-Dollar Markets", .Country = "Canada", .City = "Tsawwassen", .UnitPrice = 44, .Quantity = 16})
-        Return list
-    End Function
-End Class
+        Public Property Quantity As Integer
+
+        <DisplayFormat(DataFormatString:="yyyy-MMM-dd dddd")>
+        Public Property OrderDate As Date
+
+        <Display(AutoGenerateField:=False, Description:="This column is not created.")>
+        Public Property AdditionalInfo As String
+    End Class
+
+    Public Class Products
+
+        Public Shared Function GetProducts() As ObservableCollection(Of Product)
+            Dim products = New ObservableCollection(Of Product) From {New Product() With {.Id = 0, .ProductName = "Chang", .Country = Countries.UK, .City = "Cowes", .UnitPrice = 19, .Quantity = 10, .OrderDate = New DateTime(2021, 10, 23)}, New Product() With {.Id = 1, .ProductName = "Gravad lax", .Country = Countries.Italy, .City = "Reggio Emilia", .UnitPrice = 12.5, .Quantity = 16, .OrderDate = New DateTime(2021, 10, 22)}, New Product() With {.Id = 2, .ProductName = "Ravioli Angelo", .Country = Countries.Brazil, .City = "Rio de Janeiro", .UnitPrice = 19, .Quantity = 12, .OrderDate = New DateTime(2021, 10, 21)}, New Product() With {.Id = 3, .ProductName = "Tarte au sucre", .Country = Countries.Germany, .City = "Leipzig", .UnitPrice = 22, .Quantity = 50, .OrderDate = New DateTime(2021, 10, 15)}, New Product() With {.Id = 4, .ProductName = "Steeleye Stout", .Country = Countries.USA, .City = "Denver", .UnitPrice = 18, .Quantity = 20, .OrderDate = New DateTime(2021, 10, 8)}, New Product() With {.Id = 5, .ProductName = "Pavlova", .Country = Countries.Austria, .City = "Graz", .UnitPrice = 21, .Quantity = 52, .OrderDate = New DateTime(2021, 10, 1)}, New Product() With {.Id = 6, .ProductName = "Longlife Tofu", .Country = Countries.USA, .City = "Boise", .UnitPrice = 7.75, .Quantity = 120, .OrderDate = New DateTime(2021, 9, 17)}, New Product() With {.Id = 7, .ProductName = "Alice Mutton", .Country = Countries.Mexico, .City = "México D.F.", .UnitPrice = 21, .Quantity = 15, .OrderDate = New DateTime(2021, 9, 25)}}
+            Return products
+        End Function
+    End Class
+End Namespace

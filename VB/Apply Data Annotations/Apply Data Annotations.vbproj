@@ -125,4 +125,13 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\at.png" />
+    <Resource Include="Images\br.png" />
+    <Resource Include="Images\de.png" />
+    <Resource Include="Images\gb.png" />
+    <Resource Include="Images\it.png" />
+    <Resource Include="Images\mx.png" />
+    <Resource Include="Images\us.png" />
+  </ItemGroup>
 </Project>
