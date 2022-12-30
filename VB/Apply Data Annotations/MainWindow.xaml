@@ -6,6 +6,6 @@
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
     <Grid>
-        <dxg:GridControl Name="grid" AutoGenerateColumns="AddNew" />
+        <dxg:GridControl Name="grid" AutoGenerateColumns="AddNew"/>
     </Grid>
 </Window>
