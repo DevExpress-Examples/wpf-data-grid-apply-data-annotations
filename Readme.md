@@ -26,6 +26,6 @@ The following help topic lists supported attributes from the [System.ComponentMo
 
 ## More Examples
 
-* [WPF Data Grid - Implement Attributes-Based Validation](https://github.com/DevExpress-Examples/how-to-implement-attributes-based-validation-e3191)
+* [WPF Data Grid - Implement Attribute-Based Validation](https://github.com/DevExpress-Examples/how-to-implement-attributes-based-validation-e3191)
 * [Format GridControl Columns Using Data Attributes and Fluent API](https://github.com/DevExpress-Examples/how-to-format-gridcontrol-columns-using-data-attributes-and-fluent-api-e5119)
 * [Use DataAnnotation Attributes with DevExpress Controls](https://github.com/DevExpress-Examples/how-to-use-dataannotation-attributes-with-devexpress-controls-e5179)
