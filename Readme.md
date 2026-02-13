@@ -31,7 +31,7 @@ The following help topic lists supported attributes from the [System.ComponentMo
 * [Format GridControl Columns Using Data Attributes and Fluent API](https://github.com/DevExpress-Examples/how-to-format-gridcontrol-columns-using-data-attributes-and-fluent-api-e5119)
 * [Use DataAnnotation Attributes with DevExpress Controls](https://github.com/DevExpress-Examples/how-to-use-dataannotation-attributes-with-devexpress-controls-e5179)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-apply-data-annotations&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-apply-data-annotations&~~~was_helpful=no)
 
